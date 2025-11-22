@@ -78,7 +78,7 @@ export  function  escapeHtml(s  =  '')  {
 }
 
 /* Generates a random Hex color*/
-export const randomColor=()=>{
+export function randomColor() {
     return '#'+Math.floor(Math.random()*16777216).toString(16).padStart(6,0);
 }
 
