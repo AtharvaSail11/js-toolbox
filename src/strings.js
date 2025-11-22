@@ -21,16 +21,17 @@ export  function  kebabCase(s  =  '')  {
 }
 
 export  function  slugify(s  =  '')  {
-  return  kebabCase(s)
-    .normalize('NFKD')
+  return  kebabCase(
+    s.normalize('NFKD')
     .replace(/\p{Diacritic}/gu,  '')
-    .toLowerCase();
+    .toLowerCase()
+  );
 }
 
 export  function  truncate(s  =  '',  max  =  100,  suffix  =  '…')  {
   const  str  =  String(s);
   if  (str.length  <=  max)  return  str;
-  return  str.slice(0,  Math.max(0,  max  -  suffix.length))  +  suffix;
+  return  str.slice(0,  Math.max(0,  max))  +  suffix;
 }
 
 export  function  pad(s  =  '',  length  =  2,  ch  =  '  ')  {
