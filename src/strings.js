@@ -76,6 +76,10 @@ export  function  escapeHtml(s  =  '')  {
   return  String(s).replace(/[&<>"']/g,  (char)  =>  map[char]);
 }
 
+/* Generates a random Hex color*/
+export const randomColor=()=>{
+    return '#'+Math.floor(Math.random()*16777216).toString(16).padStart(6,0);
+}
 
 
 

@@ -11,6 +11,7 @@ assert.equal(strings.camelCase('hello-world'),  'helloWorld');
 assert.equal(strings.snakeCase('HelloWorld'),  'hello_world');
 assert.equal(strings.repeat('x',  3),  'xxx');
 assert.equal(strings.escapeHtml('<div>'),  '&lt;div&gt;');
+assert.match(strings.randomColor(),/^#([0-9a-f]{6})$/);
 
 console.log('strings  tests  ok');
 
